@@ -28,7 +28,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   if (to.path === '/login') return next()
   // 从vuex中获取token
-  if (!token) next('/login')
+  // if (!token) next('/login')
   next()
 })
 
