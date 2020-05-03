@@ -60,7 +60,7 @@ export default {
     login() {
       this.$refs.loginFormRef.validate(valid => {
         if (!valid) return;
-        // 使用network中的Axios封装实例链式编程请求后端数据
+        // 使用network中的Axios封装实例链式编程请求后端数据, 错误的话用toast提示
         this.$message.success("登陆成功"); // 弹框提示
         // 使用vuex保存响应式状态：token
         this.$router.push("/home"); // 编程式路由跳转
